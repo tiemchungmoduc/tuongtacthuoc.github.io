@@ -31,7 +31,7 @@
            <div class="col-lg-12">
             <table id="example" class="table table-striped display nowrap" cellspacing="0" width="100%">
              <thead>
-                    <tr id="list-header" style="color: white">
+                    <tr id="list-header" style="color: white; background-color: rgb(0, 123, 255);">
                         <th>STT</th>
 			<th>TÊN VẮC XIN</th>
                         <th>NSX</th>
@@ -145,14 +145,6 @@ $(document).ready(function (){
     	]
     	});
 	
-	$("#list-header").on({
-		mouseenter: function() {
-			$(this).css("background-color", "lightblue");
-		},
-		mouseleave: function(){
-        	$(this).css("background-color", "#007bff");
-    	}, 
-	});	
 });
     </script>
     
