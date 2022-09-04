@@ -94,7 +94,7 @@ $(document).ready(function (){
 	var table = $('#example').DataTable({
 		ajax: 'Data.txt',
 	responsive: true,
-    	processing: true,
+	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
     	columns:[
     	  { data: "STT" },
           { data: "TÊN VẮC XIN"},
@@ -147,10 +147,10 @@ $(document).ready(function (){
 	
 	$("#list-header").on({
 		mouseenter: function() {
-			$(this).css("background-color", "lightgreen");
+			$(this).css("background-color", "green");
 		},
 		mouseleave: function(){
-        	$(this).css("background-color", "lightblue");
+        	$(this).css("background-color", "blue");
     	}, 
 	});	
 });
