@@ -162,18 +162,6 @@ function filterColumn(i) {
         .draw();
 }
  
-$(document).ready(function () {
-    $('#example').DataTable();
- 
-    $('input.global_filter').on('keyup click', function () {
-        filterGlobal();
-    });
- 
-    $('input.column_filter').on('keyup click', function () {
-        filterColumn($(this).parents('tr').attr('data-column'));
-    });
-});
-
 $(document).ready(function (){
 	var table = $('#example').DataTable({
 		ajax: 'Data.txt',
@@ -228,6 +216,14 @@ $(document).ready(function (){
           },
     	]
     	});
+	
+	$('input.global_filter').on('keyup click', function () {
+        filterGlobal();
+   	 });
+ 
+    	$('input.column_filter').on('keyup click', function () {
+        filterColumn($(this).parents('tr').attr('data-column'));
+   	 });
 	
 });
     </script>
