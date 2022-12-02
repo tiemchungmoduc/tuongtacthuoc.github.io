@@ -154,7 +154,11 @@ $(document).ready(function() {
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
     	columns:[
     	  { data: "STT" },
-          { data: "Hoạt chất 1"},
+   	  { data: "Hoạt chất 1",
+          render: function (data, type, full, meta) {
+                                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
+                            },
+          },
 	  { data: "Hoạt chất 2",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
