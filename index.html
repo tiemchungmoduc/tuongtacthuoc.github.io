@@ -17,14 +17,14 @@
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     
-    <title>TRA CỨU THÔNG TIN VẮC XIN</title>
+    <title>TRA CỨU TƯƠNG TÁC THUỐC</title>
 
   </head>
   <body>
 	  <p align = "center"> 
 <b><font color= "#216a14" size="4"><img src="https://1.bp.blogspot.com/-VBVJiNPCLwI/X63aUWw9BhI/AAAAAAAADwk/yA8zF6_fvM8HqAShNWDULznjamXI092YACLcBGAsYHQ/s0/tc-logo.png" style="margin-top:5px;width:100px"><br>TIÊM CHỦNG VẮC XIN MỘ ĐỨC<br>Địa chỉ: Quốc lộ 1A, Thị trấn Mộ Đức (Đối diện trường THCS Nam Đàn)<br>Hotline: 0845.100.369 - 0949.544.799</font></b>   
 </p>
-    <h1 class="text-center">TRA CỨU THÔNG TIN VẮC XIN</h1>    
+    <h1 class="text-center">TRA CỨU TƯƠNG TÁC THUỐC</h1>    
     
     <div class="container">
        <div class="row">
@@ -87,38 +87,22 @@
              <thead>
                     <tr id="list-header" style="color: white; background-color: rgb(0, 123, 255);">
                         <th>STT</th>
-			<th>TÊN VẮC XIN</th>
-                        <th>NSX</th>
-                        <th>PHÒNG BỆNH</th>
-                        <th>GIÁ</th>
-                        <th>SỐ MŨI TIÊM</th>
-                        <th>THÔNG TIN VẮC XIN</th>
-                        <th>ĐỐI TƯỢNG</th>
-                        <th>Phác đồ, lịch tiêm</th>
-                        <th>Điều kiện trước tiêm</th>
-                        <th>Khoảng cách với các vắc xin khác</th>
-                        <th>Phản ứng sau tiêm chủng</th>
-                        <th>Các câu hỏi thường gặp</th>
-                        <th>HÌNH ẢNH</th>
+			<th>Hoạt chất 1</th>
+                        <th>Hoạt chất 2</th>
+                        <th>Cơ chế</th>
+                        <th>Hậu quả</th>
+                        <th>Xử trí</th>
                     </tr>
                 </thead>
               <tbody></tbody>
                 <tfoot id="list-header">
                     <tr>
 			<th>STT</th>
-			<th>TÊN VẮC XIN</th>
-                        <th>NSX</th>
-                        <th>PHÒNG BỆNH</th>
-                        <th>GIÁ</th>
-                        <th>SỐ MŨI TIÊM</th>
-                        <th>THÔNG TIN VẮC XIN</th>
-                        <th>ĐỐI TƯỢNG</th>
-                        <th>Phác đồ, lịch tiêm</th>
-                        <th>Điều kiện trước tiêm</th>
-                        <th>Khoảng cách với các vắc xin khác</th>
-                        <th>Phản ứng sau tiêm chủng</th>
-                        <th>Các câu hỏi thường gặp</th>
-                        <th>HÌNH ẢNH</th>
+			<th>Hoạt chất 1</th>
+                        <th>Hoạt chất 2</th>
+                        <th>Cơ chế</th>
+                        <th>Hậu quả</th>
+                        <th>Xử trí</th>
                     </tr>
                 </tfoot>   
             </table>  
@@ -170,11 +154,11 @@ $(document).ready(function() {
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
     	columns:[
     	  { data: "STT" },
-          { data: "TÊN VẮC XIN"},
-          { data: "NSX"},
-          { data: "PHÒNG BỆNH"},
-          { data: "GIÁ"},
-          { data: "SỐ MŨI TIÊM"},
+          { data: "Hoạt chất 1"},
+          { data: "Hoạt chất 2"},
+          { data: "Cơ chế"},
+          { data: "Hậu quả"},
+          { data: "Xử trí"},
           { data: "THÔNG TIN VẮC XIN",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
