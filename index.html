@@ -165,6 +165,9 @@ $(document).ready(function() {
    var dataSrc = [];
 
    var table = $('#example').DataTable({
+	   'initComplete': function(){
+         var api = this.api();
+		   
 	   ajax: 'Data.txt',
 	responsive: true,
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
@@ -215,9 +218,8 @@ $(document).ready(function() {
               return '<img src="' + data + '" class="avatar" width="400" height="300" /></a>';         
             }
           },
-    	],
-      'initComplete': function(){
-         var api = this.api();
+    	];
+      
 
          // Populate a dataset for autocomplete functionality
          // using data from first, second and third columns
