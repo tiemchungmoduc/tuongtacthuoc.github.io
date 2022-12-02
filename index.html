@@ -165,9 +165,6 @@ $(document).ready(function() {
    var dataSrc = [];
 
    var table = $('#example').DataTable({
-	   'initComplete': function(){
-         var api = this.api();
-		   
 	   ajax: 'Data.txt',
 	responsive: true,
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
@@ -220,7 +217,9 @@ $(document).ready(function() {
           },
     	],
       
-
+	 'initComplete': function(){
+         var api = this.api();
+		   
          // Populate a dataset for autocomplete functionality
          // using data from first, second and third columns
          api.cells('tr', [0, 1, 2]).every(function(){
