@@ -224,7 +224,7 @@ $(document).ready(function() {
          // Initialize Typeahead plug-in
          $('.dataTables_filter input[type="search"]', api.table().container())
             .typeahead({
-               source: ajax,
+               source: 'Data.txt',
                afterSelect: function(value){
                   api.search(value).draw();
                }
