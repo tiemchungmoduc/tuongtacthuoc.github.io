@@ -155,7 +155,11 @@ $(document).ready(function() {
     	columns:[
     	  { data: "STT" },
           { data: "Hoạt chất 1"},
-          { data: "Hoạt chất 2"},
+	  { data: "Hoạt chất 2",
+          render: function (data, type, full, meta) {
+                                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
+                            },
+          },
 	  { data: "Cơ chế",
           render: function (data, type, full, meta) {
                                 return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
