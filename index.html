@@ -141,7 +141,7 @@
     <!-- extension responsive -->
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <!-- my js -->
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>  
     <script>
 	    function filterGlobal() {
     $('#example')
@@ -161,10 +161,11 @@ function filterColumn(i) {
         )
         .draw();
 }
- 
-$(document).ready(function (){
-	var table = $('#example').DataTable({
-		ajax: 'Data.txt',
+$(document).ready(function() {
+   var dataSrc = [];
+
+   var table = $('#example').DataTable({
+	   ajax: 'Data.txt',
 	responsive: true,
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
     	columns:[
@@ -215,17 +216,33 @@ $(document).ready(function (){
             }
           },
     	]
-    	});
-	
-	$('input.global_filter').on('keyup click', function () {
-        filterGlobal();
-   	 });
- 
-    	$('input.column_filter').on('keyup click', function () {
-        filterColumn($(this).parents('tr').attr('data-column'));
-   	 });
-	
-});
+      'initComplete': function(){
+         var api = this.api();
+
+         // Populate a dataset for autocomplete functionality
+         // using data from first, second and third columns
+         api.cells('tr', [0, 1, 2]).every(function(){
+            // Get cell data as plain text
+                    
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+         
+         // Sort dataset alphabetically
+         dataSrc.sort();
+        
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+      }
+   });
+}); 
+
     </script>
 <div class="container">  
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.6259692149792!2d108.88460631393161!3d14.957917572232281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc795e170dfb189ab!2zVGnDqm0gQ2jhu6duZyBW4bqvYyBYaW4gTeG7mSDEkOG7qWM!5e0!3m2!1svi!2s!4v1662282521144!5m2!1svi!2s" width="100%" height="125%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
