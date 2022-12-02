@@ -156,9 +156,21 @@ $(document).ready(function() {
     	  { data: "STT" },
           { data: "Hoạt chất 1"},
           { data: "Hoạt chất 2"},
-          { data: "Cơ chế"},
-          { data: "Hậu quả"},
-          { data: "Xử trí"},
+	  { data: "Cơ chế",
+          render: function (data, type, full, meta) {
+                                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
+                            },
+          },
+	  { data: "Hậu quả",
+          render: function (data, type, full, meta) {
+                                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
+                            },
+          },
+	  { data: "Xử trí",
+          render: function (data, type, full, meta) {
+                                return "<div id='dvNotes' style='white-space: normal;width: auto;'>" + data + "</div>";
+                            },
+          },
     	],
       
 	'initComplete': function(){
