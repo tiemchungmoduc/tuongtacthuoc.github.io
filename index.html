@@ -88,24 +88,7 @@
     <!-- my js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>  
     <script>
-	    function filterGlobal() {
-    $('#example')
-        .DataTable()
-        .search($('#global_filter').val(), $('#global_regex').prop('checked'), $('#global_smart').prop('checked'))
-        .draw();
-}
- 
-function filterColumn(i) {
-    $('#example')
-        .DataTable()
-        .column(i)
-        .search(
-            $('#col' + i + '_filter').val(),
-            $('#col' + i + '_regex').prop('checked'),
-            $('#col' + i + '_smart').prop('checked')
-        )
-        .draw();
-}
+	   
 $(document).ready(function() {
    var dataSrc = [];
 
